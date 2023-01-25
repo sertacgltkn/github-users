@@ -40,10 +40,20 @@ export default function Profile(props) {
             href={props.html_url}
             target="_blank"
             rel="noreferrer"
-            className="underline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2"
           >
             View Repo
           </a>
+          {props.homepage && (
+            <a
+              href={props.homepage}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+            >
+              Visit Site
+            </a>
+          )}
           <ul>
             <li>{props.stargazers_count.toLocaleString()} stars</li>
             <li>{props.watchers_count.toLocaleString()} watchers</li>

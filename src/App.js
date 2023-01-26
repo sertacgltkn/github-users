@@ -21,15 +21,17 @@ function App() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="bg-gray-200 rounded-lg p-2">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Enter a GitHub username"
+          className="px-3 py-2 rounded-lg text-gray-700 bg-white focus:outline-none focus:shadow-outline"
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="px-5  py-2 rounded-lg bg-rose-500 text-white hover:bg-rose-900">Search</button>
       </form>
+
       {!searchTerm ? (
         <p>Please enter a GitHub username</p>
       ) : (

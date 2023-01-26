@@ -2,6 +2,16 @@ import React from "react";
 import { format } from "date-fns";
 
 export default function Profile(props) {
+  const languageColor = (language) => {
+    switch (language) {
+      case "JavaScript":
+        return "bg-yellow-500";
+      case "TypeScript":
+        return "bg-blue-500";
+      default:
+        return "bg-emerald-400";
+    }
+  };
   return (
     <>
       <article className="p-5 bg-white rounded-lg shadow shadow-emerald-300">

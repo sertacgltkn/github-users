@@ -1,5 +1,6 @@
 
-## [DEMO-Click Me](https://search-github-user-app-sertacgltkn.netlify.app)
+## [v1-demo](https://search-github-user-app-sertacgltkn.netlify.app)
+## [v2-demo](https://github-users-sertacgltkn.vercel.app)
 
 ### Getting started
 
@@ -11,4 +12,5 @@
 
 ### Screenshots
 
+### v1 SS
 ![github-users-photo](https://user-images.githubusercontent.com/96946069/202389508-d6dacec1-e8c5-48d1-be78-0673215494ed.jpg)

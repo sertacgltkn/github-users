@@ -21,22 +21,22 @@ function App() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="bg-gray-200 rounded-lg p-2">
+      <form onSubmit={handleSubmit} className="bg-gray-200 rounded-lg p-2 flex">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Enter a GitHub username"
-          className="px-3 py-2 rounded-lg text-gray-700 bg-white focus:outline-none focus:shadow-outline"
+          className="px-3 py-2 rounded-lg text-gray-700 bg-white focus:outline-none focus:shadow-outline flex-1"
         />
-        <button type="submit" className="px-5  py-2 rounded-lg bg-rose-500 text-white hover:bg-rose-900">Search</button>
+        <button type="submit" className="px-5 py-2 rounded-lg bg-rose-500 text-white hover:bg-rose-900 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">Search</button>
       </form>
 
       {!searchTerm ? (
         <p>Please enter a GitHub username</p>
       ) : (
         <>
-          {!items ? (
+          {items.length === 0 ? (
             <Loading />
           ) : (
             <>
@@ -56,6 +56,7 @@ function App() {
       )}
     </>
   );
+
 }
 
 export default App;

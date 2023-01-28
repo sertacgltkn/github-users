@@ -65,6 +65,7 @@ export default function Profile(props) {
             </a>
           )}
           <ul>
+            <li>{props.forks_count} forks</li>
             <li>{props.stargazers_count.toLocaleString()} stars</li>
             <li>{props.watchers_count.toLocaleString()} watchers</li>
           </ul>

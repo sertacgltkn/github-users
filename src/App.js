@@ -33,7 +33,7 @@ function App() {
       </form>
 
       {!searchTerm ? (
-        <p>Please enter a GitHub username</p>
+        <p className="text-yellow-400	">Please enter a GitHub username</p>
       ) : (
         <>
           {items.length === 0 ? (
@@ -41,7 +41,7 @@ function App() {
           ) : (
             <>
               <section className="py-20 pb-20">
-                <h1 className="text-2xl font-bold">
+                <h1 className="text-2xl font-bold text-yellow-400	">
                   Viewing {searchTerm}'s repositories
                 </h1>
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">

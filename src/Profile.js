@@ -13,7 +13,7 @@ export default function Profile({
   watchers_count,
   language,
   topics,
-  open_issues
+  open_issues,
 }) {
   const languageColor = (language) => {
     switch (language) {
@@ -25,8 +25,10 @@ export default function Profile({
         return "bg-emerald-400";
     }
   };
+ 
   return (
     <>
+    
       <article className="p-5 bg-white rounded-lg shadow shadow-pink-300">
         <img
           src={owner.avatar_url}
@@ -35,9 +37,7 @@ export default function Profile({
         />
         <article className="flex items-center justify-start">
           <div className="ml-2">
-            <h2 className="text-lg font-bold capitalize">
-              {owner.login}
-            </h2>
+            <h2 className="text-lg font-bold capitalize">{owner.login}</h2>
             <p className="text-sm mb-1">{name}</p>
             {isPrivate ? (
               <p className="bg-rose-400 py-1 px-2 text-xs text-white shadow rounded-lg inline-block">
@@ -91,21 +91,20 @@ export default function Profile({
           </div>
           <div className="flex items-center">
             <span className="w-3 h-3 rounded-full mr-2 bg-rose-400"></span>
-            <p className="text-sm">{open_issues.toLocaleString()} open issues</p>
+            <p className="text-sm">
+              {open_issues.toLocaleString()} open issues
+            </p>
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-between mt-5">
           {topics.map((topic) => (
-            <span
-
-              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-1 px-3 rounded-full mr-2 mb-2"
-            >
+            <span className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-1 px-3 rounded-full mr-2 mb-2">
               {topic}
             </span>
           ))}
         </div>
       </article>
+      
     </>
   );
 }
-

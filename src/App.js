@@ -18,6 +18,9 @@ function App() {
     e.preventDefault();
     fetchData();
   };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -29,7 +32,12 @@ function App() {
           placeholder="Enter a GitHub username"
           className="px-3 py-2 rounded-lg text-gray-700 bg-white focus:outline-none focus:shadow-outline flex-1"
         />
-        <button type="submit" className="px-5 py-2 rounded-lg bg-rose-500 text-white hover:bg-rose-900 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">Search</button>
+        <button
+          type="submit"
+          className="px-5 py-2 rounded-lg bg-yellow-400 text-black hover:bg-amber-600 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+        >
+          Search
+        </button>
       </form>
 
       {!searchTerm ? (
@@ -39,7 +47,7 @@ function App() {
           {items.length === 0 ? (
             <Loading />
           ) : (
-            <>
+            <div className="flex justify-end">
               <section className="py-20 pb-20">
                 <h1 className="text-2xl font-bold text-yellow-400	">
                   Viewing {searchTerm}'s repositories
@@ -50,13 +58,15 @@ function App() {
                   ))}
                 </div>
               </section>
-            </>
+              <button className="fixed bottom-0 right-10 mb-4 ml-4 text-yellow-400 font-medium py-1 px-2 rounded-full border border-yellow-400 hover:text-neutral-900 hover:bg-yellow-400 rounded-full" onClick={scrollToTop}>Go to top</button>
+            </div>
           )}
+          
         </>
       )}
+      
     </>
   );
-
 }
 
 export default App;

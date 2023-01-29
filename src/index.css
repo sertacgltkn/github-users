@@ -27,6 +27,9 @@ body {
   max-width: 76.25rem;
   margin: auto;
   padding: 1.25rem;
+  background: url(https://media0.giphy.com/media/PvZ0Gv4ME2Er45Qywt/giphy.gif?cid=ecf05e47gec1r079xf34ni22f546oobysoalkhyd2hg2ps15&rid=giphy.gif&ct=g) repeat-y ;
+  background-size: cover;
+  z-index: -1;
   @apply bg-emerald-100 text-emerald-800;
 }
 
@@ -46,3 +49,4 @@ body::before {
 p {
   line-height: 1.8;
 }
+
